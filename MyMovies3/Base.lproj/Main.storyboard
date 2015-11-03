@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMovies3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNZ-1u-Q67">
+                                <rect key="frame" x="0.0" y="20" width="736" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="AMl-bZ-CQF"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="My Movies" id="cwW-7v-bEo"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CU-Hl-6Zl">
+                                <rect key="frame" x="0.0" y="64" width="720" height="351"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaE-br-9a4">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="351"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCB-H6-cc0">
+                                                <rect key="frame" x="4" y="8" width="236" height="309"/>
+                                                <animations/>
+                                                <state key="normal" title="Button" image="trailer1.png"/>
+                                                <connections>
+                                                    <segue destination="PPZ-dL-Ky1" kind="show" identifier="first" id="QXc-AQ-dNv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uCB-H6-cc0" secondAttribute="trailing" id="Yla-g5-blp"/>
+                                            <constraint firstAttribute="bottom" secondItem="uCB-H6-cc0" secondAttribute="bottom" constant="34" id="edj-rI-J2W"/>
+                                            <constraint firstItem="uCB-H6-cc0" firstAttribute="top" secondItem="IaE-br-9a4" secondAttribute="topMargin" id="epL-LV-HyS"/>
+                                            <constraint firstItem="uCB-H6-cc0" firstAttribute="leading" secondItem="IaE-br-9a4" secondAttribute="leading" constant="4" id="gfa-qs-cys"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWi-lP-wWy">
+                                        <rect key="frame" x="240" y="0.0" width="240" height="351"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWX-0Y-jzc">
+                                                <rect key="frame" x="0.0" y="8" width="232" height="308"/>
+                                                <animations/>
+                                                <state key="normal" title="Button" image="trailer2.png"/>
+                                                <connections>
+                                                    <segue destination="PPZ-dL-Ky1" kind="show" identifier="second" id="Oc8-wy-EB1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="MWX-0Y-jzc" firstAttribute="top" secondItem="jWi-lP-wWy" secondAttribute="topMargin" id="LOB-5h-lCn"/>
+                                            <constraint firstItem="MWX-0Y-jzc" firstAttribute="leading" secondItem="jWi-lP-wWy" secondAttribute="leading" id="W3Y-7t-eyt"/>
+                                            <constraint firstItem="MWX-0Y-jzc" firstAttribute="trailing" secondItem="jWi-lP-wWy" secondAttribute="trailingMargin" id="gap-Ur-PXG"/>
+                                            <constraint firstAttribute="bottom" secondItem="MWX-0Y-jzc" secondAttribute="bottom" constant="35" id="md3-t2-1B1"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oD-5y-nmH">
+                                        <rect key="frame" x="480" y="0.0" width="240" height="351"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWV-gn-5Bp">
+                                                <rect key="frame" x="0.0" y="8" width="248" height="311"/>
+                                                <animations/>
+                                                <state key="normal" title="Button" image="trailer3.png"/>
+                                                <connections>
+                                                    <segue destination="PPZ-dL-Ky1" kind="show" identifier="third" id="dd4-Fs-BJ2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="EWV-gn-5Bp" firstAttribute="leading" secondItem="0oD-5y-nmH" secondAttribute="leading" id="BsO-fa-t1c"/>
+                                            <constraint firstAttribute="trailing" secondItem="EWV-gn-5Bp" secondAttribute="trailing" constant="-8" id="Cvg-6J-wsb"/>
+                                            <constraint firstAttribute="bottom" secondItem="EWV-gn-5Bp" secondAttribute="bottom" constant="32" id="byG-hn-i3X"/>
+                                            <constraint firstItem="EWV-gn-5Bp" firstAttribute="top" secondItem="0oD-5y-nmH" secondAttribute="topMargin" id="jJI-Ic-Dao"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="jWi-lP-wWy" firstAttribute="leading" secondItem="8CU-Hl-6Zl" secondAttribute="leading" constant="240" id="36L-hl-XE0"/>
+                                    <constraint firstItem="jWi-lP-wWy" firstAttribute="centerX" secondItem="8CU-Hl-6Zl" secondAttribute="centerX" id="QpB-bg-2m7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="8CU-Hl-6Zl" secondAttribute="bottom" constant="-1" id="7GX-3G-VqF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8CU-Hl-6Zl" secondAttribute="trailing" constant="-4" id="Dlj-fH-5WQ"/>
+                            <constraint firstItem="eNZ-1u-Q67" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PvN-1o-Zc9"/>
+                            <constraint firstItem="eNZ-1u-Q67" firstAttribute="leading" secondItem="8CU-Hl-6Zl" secondAttribute="leading" id="bwS-mx-6WS"/>
+                            <constraint firstItem="8CU-Hl-6Zl" firstAttribute="top" secondItem="eNZ-1u-Q67" secondAttribute="bottom" id="dyO-an-wpc"/>
+                            <constraint firstItem="eNZ-1u-Q67" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eqF-l3-mup"/>
+                            <constraint firstAttribute="trailing" secondItem="eNZ-1u-Q67" secondAttribute="trailing" id="itf-qa-Ev3"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="VJw-hw-Kie">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="PPZ-dL-Ky1" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGJ-uA-gPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trailer1.png" width="214" height="312"/>
+        <image name="trailer2.png" width="463" height="678"/>
+        <image name="trailer3.png" width="275" height="425"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Oc8-wy-EB1"/>
+    </inferredMetricsTieBreakers>
+</document>
